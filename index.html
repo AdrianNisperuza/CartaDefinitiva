@@ -9,11 +9,8 @@
 </head>
 <body>
 
-  <!-- ELEMENTO DE AUDIO (Ruta con codificación web para tildes y comillas en la raíz) -->
-  <audio id="musicaCarta" loop preload="auto">
-    <source src="./está canción es perfecta para dedicar el 1 de agosto Cupid's Chokehold - Gym Class Heroes.mp3" type="audio/mpeg">
-    Tu navegador no soporta el elemento de audio.
-  </audio>
+<!-- REPRODUCTOR OCULTO DE YOUTUBE -->
+<div id="player" style="display: none;"></div>
 
   <div class="background-hearts"></div>
   <div class="sparkles"></div>
@@ -137,26 +134,51 @@
 
   </div>
 
-  <!-- JAVASCRIPT -->
-  <script>
-    function toggleCarta() {
-      const container = document.getElementById('cartaContainer');
-      const btn = document.getElementById('toggleBtn');
-      const musica = document.getElementById('musicaCarta');
+ <!-- JAVASCRIPT CON API DE YOUTUBE -->
+<script>
+  // Cargar la API IFrame de YouTube
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  var player;
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+      height: '0',
+      width: '0',
+      // CAMBIA ESTE ID por el ID de la canción de YouTube que quieras utilizar
+      // Ejemplo: si la URL es https://www.youtube.com/watch?v=dQw4w9WgXcQ, el ID es "dQw4w9WgXcQ"
+      videoId: '8WOY3DaSVs', 
+      playerVars: {
+        'autoplay': 0,
+        'controls': 0,
+        'loop': 1,
+        'playlist': '8WOY3DaSVs' // Repetir el ID aquí para permitir el bucle (loop)
+      }
+    });
+  }
+
+  function toggleCarta() {
+    const container = document.getElementById('cartaContainer');
+    const btn = document.getElementById('toggleBtn');
+    
+    container.classList.toggle('open');
+    
+    if (container.classList.contains('open')) {
+      btn.textContent = 'Cerrar Carta';
       
-      container.classList.toggle('open');
+      // Reproducir música si el reproductor está listo
+      if (player && player.playVideo) {
+        player.playVideo();
+      }
+    } else {
+      btn.textContent = 'Abrir Carta';
       
-      if (container.classList.contains('open')) {
-        btn.textContent = 'Cerrar Carta';
-        musica.play().catch(error => {
-          console.log("Reproducción automática bloqueada por el navegador:", error);
-        });
-      } else {
-        btn.textContent = 'Abrir Carta';
-        musica.pause();
-        musica.currentTime = 0;
+      // Detener y pausar música al cerrar
+      if (player && player.pauseVideo) {
+        player.pauseVideo();
       }
     }
-  </script>
-</body>
-</html>
+  }
+</script>
