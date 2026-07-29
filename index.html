@@ -9,9 +9,9 @@
 </head>
 <body>
 
-  <!-- ELEMENTO DE AUDIO (Cambia 'cancion.mp3' por tu archivo) -->
+  <!-- ELEMENTO DE AUDIO (Ruta adaptada con caracteres encoded para los espacios) -->
   <audio id="musicaCarta" loop preload="auto">
-    <source src="/Carta/Imagenes/está canción es perfecta para dedicar el 1 de agosto  Cupid's Chokehold - Gym Class Heroes.mp3" type="audio/mpeg">
+    <source src="./Imagenes/está%20canción%20es%20perfecta%20para%20dedicar%20el%201%20de%20agosto%20Cupid's%20Chokehold%20-%20Gym%20Class%20Heroes.mp3" type="audio/mpeg">
     Tu navegador no soporta el elemento de audio.
   </audio>
 
@@ -20,102 +20,107 @@
 
   <div class="container" id="cartaContainer">
 
-    <!-- SOBRE (Se oculta suavemente al abrir) -->
+    <!-- SOBRE -->
     <div class="envelope">
       <div class="envelope-top"></div>
       <div class="envelope-front"></div>
       <div class="seal">❤️</div>
     </div>
 
-    <!-- CARTA / HOJA (Más ancha) -->
+    <!-- CARTA / HOJA -->
     <div class="letter-wrapper">
       <div class="letter">
         
         <div class="letter-header">
           <h1>Para mi noviecita linda</h1>
-          <p class="subtitle">Feliz Día de la Novia, mi amor. ❤️
-</p>
+          <p class="subtitle">Feliz Día de la Novia, mi amor. ❤️</p>
         </div>
 
         <!-- SECCIÓN 1: TEXTO + 3 FOTOS -->
         <p>
-Hoy, 1 de agosto, quiero recordarte lo especial que eres para mí. 
-Gracias por llegar a mi vida y por llenar mis días de alegría, cariño y momentos que siempre guardaré en mi corazón.
-Cada sonrisa tuya, cada conversación y cada recuerdo que hemos creado juntos significan mucho para mí. Eres una persona increíble,
- y me siento muy afortunado de poder compartir este camino contigo.  </p>
+          Hoy, 1 de agosto, quiero recordarte lo especial que eres para mí. 
+          Gracias por llegar a mi vida y por llenar mis días de alegría, cariño y momentos que siempre guardaré en mi corazón.
+          Cada sonrisa tuya, cada conversación y cada recuerdo que hemos creado juntos significan mucho para mí. Eres una persona increíble,
+          y me siento muy afortunado de poder compartir este camino contigo.
+        </p>
 
         <div class="photo-grid-3">
-          <img class="photo" src=" ![image alt](https://github.com/AdrianNisperuza/CartaDefinitiva/blob/844f7e60cb55ae0a9c742e558a508a2506a0de4c/1.jpeg) " alt="Foto 1">
-          <img class="photo" src="/2.jpeg" alt="Foto 2">
-          <img class="photo" src="/8.jpeg" alt="Foto 3">
+          <img class="photo" src="./1.jpeg" alt="Foto 1">
+          <img class="photo" src="./2.jpeg" alt="Foto 2">
+          <img class="photo" src="./8.jpeg" alt="Foto 3">
         </div>
 
         <!-- SECCIÓN 2: TEXTO + 3 FOTOS -->
         <h2>Lo Mejor Al Empezar Mi Dia</h2>
-        <p>No hay mejor manera de empezar el día que despertando y teniendo la oportunidad de desearte unos buenos días. 
-Saber que existes ya hace que mi mañana sea mucho más bonita.
-Y si además tengo la suerte de ver una foto tuya recién levantada, 
-con esa naturalidad tan hermosa que tienes, mi día mejora aún más. 
-Me encanta verte así, porque para mí sigues siendo la persona más linda, 
-incluso con el cabello despeinado y la carita de recién despertar.</p>
+        <p>
+          No hay mejor manera de empezar el día que despertando y teniendo la oportunidad de desearte unos buenos días. 
+          Saber que existes ya hace que mi mañana sea mucho más bonita.
+          Y si además tengo la suerte de ver una foto tuya recién levantada, 
+          con esa naturalidad tan hermosa que tienes, mi día mejora aún más. 
+          Me encanta verte así, porque para mí sigues siendo la persona más linda, 
+          incluso con el cabello despeinado y la carita de recién despertar.
+        </p>
 
         <div class="photo-grid-3">
-          <img class="photo" src="/Carta/Imagenes/1.jpeg" alt="Foto 4">
-          <img class="photo" src="/Carta/Imagenes/3.jpeg" alt="Foto 5">
-          <img class="photo" src="/Carta/Imagenes/9.jpeg" alt="Foto 6">
+          <img class="photo" src="./Imagenes/1.jpeg" alt="Foto 4">
+          <img class="photo" src="./Imagenes/3.jpeg" alt="Foto 5">
+          <img class="photo" src="./Imagenes/9.jpeg" alt="Foto 6">
         </div>
 
         <!-- SECCIÓN 3: TEXTO + 3 FOTOS -->
         <h2>Amo Lo Artista Que Eres</h2>
-        <p>Hay algo de ti que siempre me ha encantado: el talento que tienes para crear. Me fascina verte dibujar y convertir tus ideas en algo tan bonito. 
-Cada uno de tus dibujos refleja una parte de ti,
- y eso los hace aún más especiales.
-También me encanta que disfrutes tomar fotografías. Tienes una forma muy especial de capturar momentos, 
-paisajes y pequeños detalles que muchas personas pasarían por alto. Es bonito ver cómo, a través de tus fotos, 
-logras transmitir emociones y conservar recuerdos de una manera única.
-Admiro mucho la dedicación y el cariño que le pones a todo lo que haces. Para mí, eres una verdadera artista, 
-porque no solo haces dibujos hermosos, sino que también sabes encontrar belleza en el mundo y capturarla con tu cámara.</p>
+        <p>
+          Hay algo de ti que siempre me ha encantado: el talento que tienes para crear. Me fascina verte dibujar y convertir tus ideas en algo tan bonito. 
+          Cada uno de tus dibujos refleja una parte de ti, y eso los hace aún más especiales.
+          También me encanta que disfrutes tomar fotografías. Tienes una forma muy especial de capturar momentos, 
+          paisajes y pequeños detalles que muchas personas pasarían por alto. Es bonito ver cómo, a través de tus fotos, 
+          logras transmitir emociones y conservar recuerdos de una manera única.
+          Admiro mucho la dedicación y el cariño que le pones a todo lo que haces. Para mí, eres una verdadera artista, 
+          porque no solo haces dibujos hermosos, sino que también sabes encontrar belleza en el mundo y capturarla con tu cámara.
+        </p>
 
         <div class="photo-grid-3">
-          <img class="photo" src="/Carta/Imagenes/10.jpeg" alt="Foto 7">
-          <img class="photo" src="/Carta/Imagenes/11.jpeg" alt="Foto 8">
-          <img class="photo" src="/Carta/Imagenes/12.jpeg" alt="Foto 9">
+          <img class="photo" src="./Imagenes/10.jpeg" alt="Foto 7">
+          <img class="photo" src="./Imagenes/11.jpeg" alt="Foto 8">
+          <img class="photo" src="./Imagenes/12.jpeg" alt="Foto 9">
         </div>
 
         <!-- SECCIÓN 4: TEXTO + 3 FOTOS -->
         <h2>Lo Que Más Me Gusta de Ti</h2>
-        <p>Hay muchas cosas que me encantan de ti, pero si tuviera que elegir mis favoritas, sin duda serían tus ojos,
- tus labios y esos pequeños lunares que te hacen tan única.
-Tus ojos tienen algo especial que siempre logra llamar mi atención. Podría pasar mucho tiempo mirándolos, 
-porque transmiten una mezcla de ternura, 
-calma y una belleza que me resulta imposible de describir con palabras.
-Tus labios me parecen simplemente hermosos. Cada vez que sonríes haces que todo se vea más bonito, 
-y esa sonrisa tiene la capacidad de alegrarme incluso en los días más difíciles.
-Y tus lunares... son uno de los detalles que más adoro de ti. 
-Me parecen tan únicos que siento que forman parte de todo lo que te hace especial. 
-Son pequeños detalles que hacen que seas aún más hermosa a mis ojos. </p>
+        <p>
+          Hay muchas cosas que me encantan de ti, pero si tuviera que elegir mis favoritas, sin duda serían tus ojos,
+          tus labios y esos pequeños lunares que te hacen tan única.
+          Tus ojos tienen algo especial que siempre logra llamar mi atención. Podría pasar mucho tiempo mirándolos, 
+          porque transmiten una mezcla de ternura, calma y una belleza que me resulta imposible de describir con palabras.
+          Tus labios me parecen simplemente hermosos. Cada vez que sonríes haces que todo se vea más bonito, 
+          y esa sonrisa tiene la capacidad de alegrarme incluso en los días más difíciles.
+          Y tus lunares... son uno de los detalles que más adoro de ti. 
+          Me parecen tan únicos que siento que forman parte de todo lo que te hace especial. 
+          Son pequeños detalles que hacen que seas aún más hermosa a mis ojos.
+        </p>
 
         <div class="photo-grid-3">
-          <img class="photo" src="/Carta/Imagenes/14.jpeg" alt="Foto 10">
-          <img class="photo" src="/Carta/Imagenes/4.jpeg" alt="Foto 11">
-          <img class="photo" src="/Carta/Imagenes/13.jpeg" alt="Foto 12">
+          <img class="photo" src="./Imagenes/14.jpeg" alt="Foto 10">
+          <img class="photo" src="./Imagenes/4.jpeg" alt="Foto 11">
+          <img class="photo" src="./Imagenes/13.jpeg" alt="Foto 12">
         </div>
 
         <!-- SECCIÓN 5: TEXTO + 3 FOTOS -->
         <h2>Te Deseo Un Feliz Dia Mi Niña</h2>
         <p>
-Y así llega el final de esta pequeña carta, aunque todo lo que siento por ti nunca podría caber en unas cuantas palabras.
-Solo quiero agradecerte por ser parte de mi vida y por regalarme tantos momentos bonitos.
- Espero que cada vez que leas esta carta recuerdes lo especial que eres para mí y lo mucho que significas.
-En este 1 de agosto, quiero desearte un muy feliz Día de la Novia. Espero que tengas un día lleno de sonrisas, 
-cariño y momentos felices, porque te lo mereces.
-Gracias por ser tú, por iluminar mis días y por hacer que mi vida sea mucho más bonita desde que llegaste a ella.
-Feliz Día de la Novia, mi amor. ❤️ Te quiero muchísimo y espero seguir compartiendo muchos más momentos contigo.        </p>
+          Y así llega el final de esta pequeña carta, aunque todo lo que siento por ti nunca podría caber en unas cuantas palabras.
+          Solo quiero agradecerte por ser parte de mi vida y por regalarme tantos momentos bonitos.
+          Espero que cada vez que leas esta carta recuerdes lo especial que eres para mí y lo mucho que significas.
+          En este 1 de agosto, quiero desearte un muy feliz Día de la Novia. Espero que tengas un día lleno de sonrisas, 
+          cariño y momentos felices, porque te lo mereces.
+          Gracias por ser tú, por iluminar mis días y por hacer que mi vida sea mucho más bonita desde que llegaste a ella.
+          Feliz Día de la Novia, mi amor. ❤️ Te quiero muchísimo y espero seguir compartiendo muchos más momentos contigo.
+        </p>
 
         <div class="photo-grid-3">
-          <img class="photo" src="/Carta/Imagenes/6.jpeg" alt="Foto 13">
-          <img class="photo" src="/Carta/Imagenes/15.jpeg" alt="Foto 14">
-          <img class="photo" src="/Carta/Imagenes/16.jpeg" alt="Foto 15">
+          <img class="photo" src="./Imagenes/6.jpeg" alt="Foto 13">
+          <img class="photo" src="./Imagenes/15.jpeg" alt="Foto 14">
+          <img class="photo" src="./Imagenes/16.jpeg" alt="Foto 15">
         </div>
 
         <!-- FIRMA -->
@@ -132,7 +137,7 @@ Feliz Día de la Novia, mi amor. ❤️ Te quiero muchísimo y espero seguir com
 
   </div>
 
-  <!-- JAVASCRIPT CON REPRODUCCIÓN DE MÚSICA -->
+  <!-- JAVASCRIPT -->
   <script>
     function toggleCarta() {
       const container = document.getElementById('cartaContainer');
@@ -144,15 +149,12 @@ Feliz Día de la Novia, mi amor. ❤️ Te quiero muchísimo y espero seguir com
       if (container.classList.contains('open')) {
         btn.textContent = 'Cerrar Carta';
         
-        // Reproducir audio al abrir
         musica.play().catch(error => {
           console.log("Reproducción automática bloqueada por el navegador:", error);
         });
         
       } else {
-        btn.textContent = 'Abrir Carta';
-        
-        // Detener audio al cerrar
+        btn.textContent = 'Cerrar Carta' ? 'Abrir Carta' : 'Abrir Carta';
         musica.pause();
         musica.currentTime = 0;
       }
