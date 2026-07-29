@@ -1,0 +1,356 @@
+/* ===========================
+   RESET Y ESTILOS BASE
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    min-height:100vh;
+    overflow-x:hidden;
+    background:linear-gradient(135deg,#ffe0ec,#fff4da,#ffe6fa);
+    background-attachment:fixed;
+}
+
+/* ===========================
+   FONDO ANIMADO
+=========================== */
+
+.background-hearts{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    z-index:-3;
+}
+
+.sparkles{
+    position:fixed;
+    inset:0;
+    z-index:-2;
+    background-image:
+        radial-gradient(circle,#ffffffaa 2px,transparent 3px),
+        radial-gradient(circle,#ffffff88 1px,transparent 2px),
+        radial-gradient(circle,#ffffff66 3px,transparent 4px);
+    background-size:
+        180px 180px,
+        260px 260px,
+        320px 320px;
+    animation:moveSparkles 25s linear infinite;
+}
+
+@keyframes moveSparkles{
+    from{ transform:translateY(0); }
+    to{ transform:translateY(-300px); }
+}
+
+/* ===========================
+   CONTENEDOR PRINCIPAL
+=========================== */
+
+.container{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:50px 20px 80px;
+}
+
+/* ===========================
+   SOBRE (DECORATIVO)
+=========================== */
+
+.envelope{
+    position:relative;
+    width:380px;
+    height:240px;
+    margin:0 auto;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    opacity: 1;
+}
+
+/* Ocultar el sobre al abrir la carta */
+.open .envelope {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-40px);
+    height: 0;
+    margin: 0;
+}
+
+.envelope-front{
+    position:absolute;
+    inset:0;
+    background:#ff8fb9;
+    border-radius:12px;
+    box-shadow:0 20px 45px rgba(0,0,0,.25);
+    z-index:4;
+}
+
+.envelope-top{
+    position:absolute;
+    top:0;
+    left:0;
+    width:0;
+    height:0;
+    border-left:190px solid transparent;
+    border-right:190px solid transparent;
+    border-top:130px solid #ff5f9d;
+    transform-origin:top;
+    transition:transform 0.6s ease;
+    z-index:6;
+}
+
+.seal{
+    position:absolute;
+    left:50%;
+    top:95px;
+    transform:translateX(-50%);
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+    z-index:7;
+}
+
+.open .envelope-top {
+    transform: rotateX(180deg);
+}
+
+/* ===========================
+   HOJA DE LA CARTA (ANCHA Y REVELADO EN GRID)
+=========================== */
+
+.letter-wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 1s ease-in-out, opacity 0.8s ease;
+    width: min(1200px, 96vw);
+    margin: 20px auto 0;
+    opacity: 0;
+}
+
+.letter {
+    overflow: hidden;
+    background: white;
+    border-radius: 25px;
+    border: 10px solid #ffe4b5;
+    box-shadow: 0 25px 60px rgba(0,0,0,.2);
+    padding: 0 60px;
+    transition: padding 0.8s ease;
+}
+
+.open .letter-wrapper {
+    grid-template-rows: 1fr;
+    opacity: 1;
+}
+
+.open .letter {
+    padding: 60px;
+}
+
+/* ===========================
+   ENCABEZADO Y TEXTO
+=========================== */
+
+.letter-header{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.letter h1{
+    font-family:'Great Vibes',cursive;
+    font-size:76px;
+    color:#ff4d91;
+}
+
+.subtitle{
+    color:#777;
+    margin-top:10px;
+    font-size:20px;
+}
+
+.letter h2{
+    text-align:center;
+    margin-top:50px;
+    color:#ff4d91;
+    font-size:42px;
+}
+
+.letter p{
+    margin:30px 0;
+    color:#555;
+    font-size:20px;
+    line-height:1.9;
+    text-align:justify;
+}
+
+/* ===========================
+   CUADRÍCULA DE 3 FOTOS POR TEXTO
+=========================== */
+
+.photo-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 35px 0;
+}
+
+.photo{
+    display:block;
+    width:100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    transition:transform .4s ease, box-shadow .4s ease;
+}
+
+.photo:hover{
+    transform:scale(1.05);
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+}
+
+/* ===========================
+   FIRMA DE Cierre
+=========================== */
+
+.firma{
+    margin-top:60px;
+    text-align:right;
+    color:#666;
+    font-size:22px;
+}
+
+.firma span{
+    font-family:'Great Vibes',cursive;
+    font-size:52px;
+    color:#ff4d91;
+}
+
+/* ===========================
+   BOTÓN
+=========================== */
+
+button{
+    margin-top:35px;
+    padding:16px 45px;
+    border:none;
+    border-radius:50px;
+    background:#ff4d91;
+    color:white;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 10px 25px rgba(255,77,145,.35);
+}
+
+button:hover{
+    transform:translateY(-4px) scale(1.05);
+}
+
+button:active{
+    transform:scale(.96);
+}
+
+/* ===========================
+   ANIMACIÓN DE CONTENIDO AL ABRIR
+=========================== */
+
+.open .letter-header,
+.open .photo-grid-3,
+.open .letter p,
+.open .firma{
+    animation:aparecer .8s ease forwards;
+}
+
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ===========================
+   SCROLLBAR PERSONALIZADO
+=========================== */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#ff7aaa;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-track{
+    background:#ffe8f1;
+}
+
+/* ===========================
+   RESPONSIVE (ADAPTACIÓN MÓVIL)
+=========================== */
+
+@media (max-width:900px){
+    .photo-grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .photo {
+        height: 200px;
+    }
+
+    .open .letter{
+        padding:40px 25px;
+    }
+
+    .letter h1{
+        font-size:56px;
+    }
+}
+
+@media (max-width:600px){
+    .photo-grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .photo {
+        height: 240px;
+    }
+
+    .envelope{
+        width:300px;
+        height:190px;
+    }
+
+    .envelope-top{
+        border-left:150px solid transparent;
+        border-right:150px solid transparent;
+        border-top:100px solid #ff5f9d;
+    }
+
+    .seal{
+        top:72px;
+        width:50px;
+        height:50px;
+        font-size:22px;
+    }
+}
