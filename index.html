@@ -9,9 +9,9 @@
 </head>
 <body>
 
-  <!-- ELEMENTO DE AUDIO (Ruta adaptada con caracteres encoded para los espacios) -->
+  <!-- ELEMENTO DE AUDIO -->
   <audio id="musicaCarta" loop preload="auto">
-    <source src="./Imagenes/está%20canción%20es%20perfecta%20para%20dedicar%20el%201%20de%20agosto%20Cupid's%20Chokehold%20-%20Gym%20Class%20Heroes.mp3" type="audio/mpeg">
+    <source src="./está%20canción%20es%20perfecta%20para%20dedicar%20el%201%20de%20agosto%20Cupid's%20Chokehold%20-%20Gym%20Class%20Heroes.mp3" type="audio/mpeg">
     Tu navegador no soporta el elemento de audio.
   </audio>
 
@@ -62,9 +62,9 @@
         </p>
 
         <div class="photo-grid-3">
-          <img class="photo" src="./Imagenes/1.jpeg" alt="Foto 4">
-          <img class="photo" src="./Imagenes/3.jpeg" alt="Foto 5">
-          <img class="photo" src="./Imagenes/9.jpeg" alt="Foto 6">
+          <img class="photo" src="./1.jpeg" alt="Foto 4">
+          <img class="photo" src="./3.jpeg" alt="Foto 5">
+          <img class="photo" src="./9.jpeg" alt="Foto 6">
         </div>
 
         <!-- SECCIÓN 3: TEXTO + 3 FOTOS -->
@@ -80,9 +80,9 @@
         </p>
 
         <div class="photo-grid-3">
-          <img class="photo" src="./Imagenes/10.jpeg" alt="Foto 7">
-          <img class="photo" src="./Imagenes/11.jpeg" alt="Foto 8">
-          <img class="photo" src="./Imagenes/12.jpeg" alt="Foto 9">
+          <img class="photo" src="./10.jpeg" alt="Foto 7">
+          <img class="photo" src="./11.jpeg" alt="Foto 8">
+          <img class="photo" src="./12.jpeg" alt="Foto 9">
         </div>
 
         <!-- SECCIÓN 4: TEXTO + 3 FOTOS -->
@@ -100,9 +100,9 @@
         </p>
 
         <div class="photo-grid-3">
-          <img class="photo" src="./Imagenes/14.jpeg" alt="Foto 10">
-          <img class="photo" src="./Imagenes/4.jpeg" alt="Foto 11">
-          <img class="photo" src="./Imagenes/13.jpeg" alt="Foto 12">
+          <img class="photo" src="./14.jpeg" alt="Foto 10">
+          <img class="photo" src="./4.jpeg" alt="Foto 11">
+          <img class="photo" src="./13.jpeg" alt="Foto 12">
         </div>
 
         <!-- SECCIÓN 5: TEXTO + 3 FOTOS -->
@@ -118,9 +118,9 @@
         </p>
 
         <div class="photo-grid-3">
-          <img class="photo" src="./Imagenes/6.jpeg" alt="Foto 13">
-          <img class="photo" src="./Imagenes/15.jpeg" alt="Foto 14">
-          <img class="photo" src="./Imagenes/16.jpeg" alt="Foto 15">
+          <img class="photo" src="./6.jpeg" alt="Foto 13">
+          <img class="photo" src="./15.jpeg" alt="Foto 14">
+          <img class="photo" src="./16.jpeg" alt="Foto 15">
         </div>
 
         <!-- FIRMA -->
@@ -148,13 +148,11 @@
       
       if (container.classList.contains('open')) {
         btn.textContent = 'Cerrar Carta';
-        
         musica.play().catch(error => {
           console.log("Reproducción automática bloqueada por el navegador:", error);
         });
-        
       } else {
-        btn.textContent = 'Cerrar Carta' ? 'Abrir Carta' : 'Abrir Carta';
+        btn.textContent = 'Abrir Carta';
         musica.pause();
         musica.currentTime = 0;
       }
